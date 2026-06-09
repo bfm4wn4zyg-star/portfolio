@@ -130,7 +130,12 @@
     .skill-title{font-size:18px;font-weight:700;margin-bottom:12px}
     .skill-description{font-size:13px;color:var(--text-secondary);line-height:1.7}
     
-    .awards-section{padding:48px;background:var(--bg-card);border:1px solid var(--border);border-radius:4px}
+    .gallery{padding:100px 0;overflow:hidden}
+    .photo-scroll-wrapper{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .photo-scroll-wrapper::-webkit-scrollbar{display:none}
+    .photo-scroll-track{display:flex;gap:20px;padding-bottom:20px}
+    .photo-card{flex:0 0 auto;width:500px;height:320px;scroll-snap-align:start;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+    .photo-card img{width:100%;height:100%;object-fit:cover;display:block}
     .awards-title{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:700;margin-bottom:32px;letter-spacing:1px}
     .awards-title svg{color:var(--accent)}
     .awards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -348,6 +353,25 @@
       </div>
     </div>
   </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label"><span class="label-number">02.5</span><span class="label-text">GALLERY</span></div>
+        <h2 class="section-title">工作瞬间</h2>
+        <p class="section-desc">展会现场 · 团队协作 · 工作日常</p>
+      </div>
+      <div class="photo-scroll-wrapper">
+        <div class="photo-scroll-track">
+          <div class="photo-card"><img src="https://raw.githubusercontent.com/bfm4wn4zyg-star/portfolio/master/work1.jpg" alt="工作照片1"></div>
+          <div class="photo-card"><img src="https://raw.githubusercontent.com/bfm4wn4zyg-star/portfolio/master/work2.jpg" alt="工作照片2"></div>
+          <div class="photo-card"><img src="https://raw.githubusercontent.com/bfm4wn4zyg-star/portfolio/master/work3.jpg" alt="工作照片3"></div>
+          <div class="photo-card"><img src="https://raw.githubusercontent.com/bfm4wn4zyg-star/portfolio/master/work4.jpg" alt="工作照片4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <section id="skills" class="skills">
     <div class="container">
