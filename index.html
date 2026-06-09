@@ -501,6 +501,12 @@
       currentSlide = index;
       updateCarousel();
     }
+    
+    // Auto-play every 3s
+    let autoPlay = setInterval(() => moveCarousel(1), 3000);
+    
+    document.querySelector('.photo-carousel').addEventListener('mouseenter', () => clearInterval(autoPlay));
+    document.querySelector('.photo-carousel').addEventListener('mouseleave', () => { autoPlay = setInterval(() => moveCarousel(1), 3000); });
   </script>
 </body>
 </html>
